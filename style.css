@@ -138,13 +138,17 @@ footer a {
         margin-bottom: 50px;
     }
 
+    #link-lists article {
+        width: 290px;
+    }
+
     #link-lists ul {
         padding-left: 20px;
         line-height: 1.5rem;
     }
 
     footer {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.5rem;
     }
 }
