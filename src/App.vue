@@ -1,6 +1,14 @@
 <script setup>
+import { onMounted } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { useDataStore } from './stores/data'
+
+const data = useDataStore();
+
+onMounted(() => {
+  data.fetchData();
+})
 </script>
 
 <template>
@@ -8,11 +16,12 @@ import HelloWorld from './components/HelloWorld.vue'
     <h1>Hi, I'm Sarah Joy</h1>
     <section>
       <ul>
-        <li><img src="http://placekitten.com/g/200/300"/></li>
-        <li><img src="http://placekitten.com/g/200/300"/></li>
-        <li><img src="http://placekitten.com/g/200/300"/></li>
-        <li><img src="http://placekitten.com/g/200/300"/></li>
-        <li><img src="http://placekitten.com/g/200/300"/></li>
+        <li v-for="img in data.me">
+          <figure>
+            <img v-for="i in img.image" :src="i.url" :alt="img.alt"/>
+            <figcaption>{{ img.title }}</figcaption>
+          </figure>
+        </li>
       </ul>
     </section>
     <section>
@@ -47,5 +56,14 @@ ul {
   display: flex;
   justify-content: flex-start;
   list-style: none;
+}
+
+figure {
+  margin: 0 .865rem;
+}
+
+img {
+  height: 200px;
+  width: auto;
 }
 </style>
