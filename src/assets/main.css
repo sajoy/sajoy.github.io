@@ -1,0 +1,40 @@
+@import './base.css';
+
+#app {
+  max-width: 1080px;
+  margin: 35% auto 0;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+
+h1, h2 {
+  margin: 1.75rem 0 1.05rem;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: .65rem;
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  color: var(--color-text);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    padding-left: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+}
