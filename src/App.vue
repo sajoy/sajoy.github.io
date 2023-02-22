@@ -35,7 +35,7 @@ const bgClass = (content) => {
 <template>
   <main>
     <span>pls don't mind my mess, I'm working on it 👩🏾‍💻</span>
-    <h1>Hi, I'm Sarah Joy</h1>
+    <h1>Hi, I'm Sarah Joy!</h1>
     <section>
       <ul>
         <!-- polaroids? -->
@@ -50,7 +50,7 @@ const bgClass = (content) => {
     </section>
     <section>
       <!-- TODO make a componentnntntntnnt -->
-      <h2>I have a lot of ideas</h2>
+      <h2>I have a lot of ideas,</h2>
       <ul>
         <!-- polaroids? -->
         <li v-for="idea in data.ideas"
@@ -80,61 +80,54 @@ const bgClass = (content) => {
       </ul>    
     </section>
     <section>
-      <h2>and skills to bring my ideas to life</h2>
-      <ul>
-        <!-- fortune cookie papers? -->
+      <h2>skills to bring my ideas to life,</h2>
+      <ul class="box-list">
         <li v-for="skill in data.skills">
           <h3>{{ skill.title }}</h3>
-          <p>{{ skill.description }}</p>
+          <!-- <p>{{ skill.description }}</p> -->
         </li>
       </ul>    
     </section>
     <section>
-      <h2>and things I want to get better at</h2>
-      <ul>
-        <!-- fortune cookie papers? -->
+      <h2>and things I want to get better at.</h2>
+      <ul class="box-list">
         <li v-for="strugg in data.struggles"
             :style="`background-image: url(${strugg.image ? strugg.image[0].url : ''})`"
             class="fortune-bg">
           <h3>{{ strugg.title }}</h3>
-          <p>{{ strugg.description }}</p>
+          <!-- <p>{{ strugg.description }}</p> -->
         </li>
       </ul>    
     </section>
     <section>
-      <h2>I also have hobbies to help me recenter and feel grounded</h2>
-      <ul>
+      <h2>I also have hobbies to help me recenter and relax,</h2>
+      <ul class="box-list">
         <li v-for="hobby in data.hobbies">
           <h3>{{ hobby.title }}</h3>
-          <p>{{ hobby.description }}</p>
+          <!-- <p>{{ hobby.description }}</p> -->
         </li>
       </ul>
     </section>
     <section>
-      <h2>and favorites that that make me feel things</h2>
-      <ul>
-        <!-- hearts -->
-        <li v-for="fav in data.favorites"
-            :style="`background-image: url(${fav.image ? fav.image[0].url : ''})`"
-            class="heart-bg">
+      <h2>favorites that make me feel things,</h2>
+      <ul class="bullet-list">
+        <li v-for="fav in data.favorites" :class="fav.category">
           <h3>{{ fav.title }}</h3>
-          <p>({{ fav.category }})</p>
         </li>
       </ul>
     </section>
     <section>
-      <h2>and values I try to live by</h2>
-      <ul>
-        <!-- hearts -->
-        <li v-for="value in data.values"
-            :style="`background-image: url(${value.image ? value.image[0].url : ''})`"
-            class="heart-bg">
+      <h2>and beliefs and values I try to live by.</h2>
+      <ul class="bullet-list values">
+        <li v-for="value in data.values">
           <h3>{{ value.title }}</h3>
-          <p>{{ value.category }}</p>
-          <p>{{ value.link }}</p>
         </li>
       </ul>
     </section>
+
+    <footer>
+      💜 SJ
+    </footer>
   </main>
 </template>
 
@@ -150,6 +143,42 @@ ul {
   overflow-x: auto; */
 }
 
+ul.bullet-list {
+  flex-direction: column;
+}
+ul.bullet-list {
+  list-style: inside;
+}
+ul.bullet-list.values li {
+  list-style-type: "🫀"; 
+}
+ul.bullet-list li.book {
+  list-style-type: "📖"; 
+}
+ul.bullet-list li.tv-show {
+  list-style-type: "📺"; 
+}
+ul.bullet-list li.song {
+  list-style-type: "🎶"; 
+}
+ul.bullet-list li.food {
+  list-style-type: "🍽️"; 
+}
+
+ul.bullet-list li h3 {
+  display: inline-block;
+}
+
+ul.box-list li {
+  margin: 0 1rem 1rem 0;
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 1.2rem;
+}
+
+ul.box-list li h3 {
+  margin: 0;
+}
 
 li {
   padding: 0;
@@ -225,5 +254,10 @@ img {
   margin-top: .5rem;
   display: inline-block;
   background: rgba(255,255,255,.5);
+}
+
+footer {
+  text-align: right;
+  margin: 3rem 0;
 }
 </style>
