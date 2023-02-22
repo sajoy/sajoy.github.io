@@ -33,3 +33,14 @@ npm run build
 ```sh
 npm run test:unit
 ```
+
+## TODO
+- componentize lists
+- make icons for favorite categories and restyle (or add a11y description for bullet point emoji?)
+
+
+
+## IDEAS!!!
+- confetti to follow around your mouse
+- use airtable as a cms for a blog
+- add intersection observer to animate in sections as title scrolls into view
