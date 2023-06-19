@@ -2,10 +2,13 @@
 
 #app {
   max-width: 1080px;
-  margin: 35% auto 0;
   padding: 2rem;
-
+  
   font-weight: normal;
+}
+
+.landing {
+  margin: 35% auto 0;
 }
 
 
