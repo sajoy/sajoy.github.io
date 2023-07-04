@@ -12,9 +12,12 @@ onMounted(() => {
 
 <template>
   <section class="landing">
-    <span>pls don't mind my mess, I'm working on it 👩🏾‍💻</span>
-    <h1>Hi, I'm Sarah Joy!</h1>
     <section>
+      <span>pls don't mind my mess, I'm working on it 👩🏾‍💻</span>
+      <h1>Hi, I'm Sarah Joy!</h1>
+      <!-- <span>I'm a code school grad w/ a BA in Creative Writing. Over the past 8 years, I worked at a start-up, taught at a code school, and most recently worked at an interactive installation and web studio. Now, I'm pursuing that indie dev life and building my first mobile app <a href="https://themostawful.substack.com/s/impulse-bye-progress-and-launch" target="_blank">Impulse Bye</a>.</span> -->
+    <section>
+    </section>
       <ul>
         <!-- polaroids? -->
         <li v-for="img in data.me"
@@ -28,7 +31,7 @@ onMounted(() => {
     </section>
     <section>
       <!-- TODO make a componentnntntntnnt -->
-      <h2>I have a lot of ideas,</h2>
+      <h2>I have a lot of ideas that I want to bring to life,</h2>
       <ul>
         <!-- polaroids? -->
         <li v-for="idea in data.ideas" class="idea">
@@ -57,27 +60,7 @@ onMounted(() => {
       </ul>    
     </section>
     <section>
-      <h2>skills to bring my ideas to life,</h2>
-      <ul class="box-list">
-        <li v-for="skill in data.skills">
-          <h3>{{ skill.title }}</h3>
-          <!-- <p>{{ skill.description }}</p> -->
-        </li>
-      </ul>    
-    </section>
-    <section>
-      <h2>and things I want to get better at.</h2>
-      <ul class="box-list">
-        <li v-for="strugg in data.struggles"
-            :style="`background-image: url(${strugg.image ? strugg.image[0].url : ''})`"
-            class="fortune-bg">
-          <h3>{{ strugg.title }}</h3>
-          <!-- <p>{{ strugg.description }}</p> -->
-        </li>
-      </ul>    
-    </section>
-    <section>
-      <h2>I also have hobbies to help me recenter and relax,</h2>
+      <h2>and hobbies that help me recenter and relax,</h2>
       <ul class="box-list">
         <li v-for="hobby in data.hobbies">
           <h3>{{ hobby.title }}</h3>
@@ -86,7 +69,7 @@ onMounted(() => {
       </ul>
     </section>
     <section>
-      <h2>favorites that make me feel things,</h2>
+      <h2>and favorites that make me feel things,</h2>
       <ul class="bullet-list">
         <li v-for="fav in data.favorites" :class="fav.category">
           <h3>{{ fav.title }}</h3>
@@ -94,7 +77,7 @@ onMounted(() => {
       </ul>
     </section>
     <section>
-      <h2>and beliefs and values I try to live by.</h2>
+      <h2>and beliefs and values I strive to live by.</h2>
       <ul class="bullet-list values">
         <li v-for="value in data.values">
           <h3>{{ value.title }}</h3>
@@ -103,7 +86,14 @@ onMounted(() => {
     </section>
 
     <footer>
-      💜 SJ
+      <span>
+        💜 SJ
+      </span>
+      <!-- <ul class="social">
+        <li>instagram @themostawful</li>
+        <li>substack @themostawful</li>
+        <li>youtube @sjs_screen</li>
+      </ul> -->
     </footer>
 
   </section>

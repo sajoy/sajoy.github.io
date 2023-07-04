@@ -11,9 +11,12 @@
 <style>
 
 ul {
-  display: flex;
-  justify-content: flex-start;
   list-style: none;
+}
+
+ul:not(.social) {
+  justify-content: flex-start;
+  display: flex;
   flex-wrap: wrap;
   padding: 0;
   /* width: 100%;
@@ -49,7 +52,7 @@ ul.bullet-list li h3 {
 ul.box-list li {
   margin: 0 1rem 1rem 0;
   border: solid 2px black;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   padding: 1.2rem;
 }
 
@@ -68,7 +71,7 @@ li.link {
 
 .tag {
   font-size: .85rem;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   line-height: .95rem;
   padding: .25rem;
   margin: .125rem;
@@ -81,7 +84,7 @@ li.tag {
 
 li.idea {
   border: solid 2px black;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   margin: 5px;
   padding: 10px;
   min-width: 23%;

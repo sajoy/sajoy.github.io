@@ -28,7 +28,7 @@ export const useDataStore = defineStore('data', () => {
             id: 'tblw8g9YzvKv7jpBz', 
             ref: ideas,
             options: {
-                sort: [{field: 'status', direction: 'desc'}]
+                sort: [{field: 'status', direction: 'asc'}]
             }
         },
         {
